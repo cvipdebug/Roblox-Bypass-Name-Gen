@@ -1,9 +1,13 @@
-import random, string, requests, gratient
+import random, string, requests
+from colorama import Fore
 from os import system
 
-system("cls && title Cvip Roblox Bypass Name Gen")
+system("cls && title Cvip Roblox Bypass Name Gen && MODE 52,14")
 
+proxies = open("proxies.txt").read().splitlines()
 
+def getProxy():
+    return random.choice(proxies)
 def main():
 
     woeking = 0
@@ -27,19 +31,19 @@ def main():
             random_shit = ("").join(random.choice(string.ascii_letters)for k in range(2))
             EndPart = "gger"
             name = f"{firstPart}{random_shit}{EndPart}"
-            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup").json()
+            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup", proxies={"http": 'http://' + getProxy()}).json()
             code1 = checker['message']
 
             if code1 == "Username is valid":
                 woeking+=1
-                print(gratient.green(f"Working {name}"))
+                print("["+Fore.GREEN+"INFO"+Fore.WHITE+f"] Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
                 with open("Names.txt", "a") as f:
                     f.write(f"{name}\n")
                     f.close()
             else:
                 notworking+=1
-                print(gratient.red(f"No Working {name}"))
+                print("["+Fore.RED+"INFO"+Fore.WHITE+f"] Not Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
     if name_chose == "2":
         while True:
@@ -48,19 +52,19 @@ def main():
             random_shit = ("").join(random.choice(string.ascii_letters)for k in range(2))
             EndPart = "gga"
             name = f"{firstPart}{random_shit}{EndPart}"
-            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup").json()
+            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup", proxies={"http": 'http://' + getProxy()}).json()
             code1 = checker['message']
 
             if code1 == "Username is valid":
                 woeking+=1
-                print(gratient.green(f"Working {name}"))
+                print("["+Fore.GREEN+"INFO"+Fore.WHITE+f"] Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
                 with open("Names.txt", "a") as f:
                     f.write(f"{name}\n")
                     f.close()
             else:
                 notworking+=1
-                print(gratient.red(f"No Working {name}"))
+                print("["+Fore.RED+"INFO"+Fore.WHITE+f"] Not Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
     if name_chose == "3":
         while True:
@@ -69,19 +73,19 @@ def main():
             random_shit = ("").join(random.choice(string.ascii_letters)for k in range(2))
             EndPart = "qk"
             name = f"{firstPart}{random_shit}{EndPart}"
-            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup").json()
+            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup", proxies={"http": 'http://' + getProxy()}).json()
             code1 = checker['message']
 
             if code1 == "Username is valid":
                 woeking+=1
-                print(gratient.green(f"Working {name}"))
+                print("["+Fore.GREEN+"INFO"+Fore.WHITE+f"] Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
                 with open("Names.txt", "a") as f:
                     f.write(f"{name}\n")
                     f.close()
             else:
                 notworking+=1
-                print(gratient.red(f"No Working {name}"))
+                print("["+Fore.RED+"INFO"+Fore.WHITE+f"] Not Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
     if name_chose == "4":
         while True:
@@ -90,19 +94,19 @@ def main():
             random_shit = ("").join(random.choice(string.ascii_letters)for k in range(2))
             EndPart = "ch"
             name = f"{firstPart}{random_shit}{EndPart}"
-            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup").json()
+            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup", proxies={"http": 'http://' + getProxy()}).json()
             code1 = checker['message']
 
             if code1 == "Username is valid":
                 woeking+=1
-                print(gratient.green(f"Working {name}"))
+                print("["+Fore.GREEN+"INFO"+Fore.WHITE+f"] Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
                 with open("Names.txt", "a") as f:
                     f.write(f"{name}\n")
                     f.close()
             else:
                 notworking+=1
-                print(gratient.red(f"No Working {name}"))
+                print("["+Fore.RED+"INFO"+Fore.WHITE+f"] Not Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
     if name_chose == "5":
         while True:
@@ -111,19 +115,19 @@ def main():
             random_shit = ("").join(random.choice(string.ascii_letters)for k in range(2))
             EndPart = "it"
             name = f"{firstPart}{random_shit}{EndPart}"
-            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup").json()
+            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup", proxies={"http": 'http://' + getProxy()}).json()
             code1 = checker['message']
 
             if code1 == "Username is valid":
                 woeking+=1
-                print(gratient.green(f"Working {name}"))
+                print("["+Fore.GREEN+"INFO"+Fore.WHITE+f"] Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
                 with open("Names.txt", "a") as f:
                     f.write(f"{name}\n")
                     f.close()
             else:
                 notworking+=1
-                print(gratient.red(f"No Working {name}"))
+                print("["+Fore.RED+"INFO"+Fore.WHITE+f"] Not Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
     if name_chose == "6":
         while True:
@@ -132,18 +136,18 @@ def main():
             random_shit = ("").join(random.choice(string.ascii_letters)for k in range(3))
             EndPart = "s"
             name = f"{firstPart}{random_shit}{EndPart}"
-            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup").json()
+            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup", proxies={"http": 'http://' + getProxy()}).json()
             code1 = checker['message']
 
             if code1 == "Username is valid":
                 woeking+=1
-                print(gratient.green(f"Working {name}"))
+                print("["+Fore.GREEN+"INFO"+Fore.WHITE+f"] Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
                 with open("Names.txt", "a") as f:
                     f.write(f"{name}\n")
                     f.close()
             else:
                 notworking+=1
-                print(gratient.red(f"No Working {name}"))
+                print("["+Fore.RED+"INFO"+Fore.WHITE+f"] Not Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
 main()
