@@ -4,7 +4,7 @@ from os import system
 
 system("cls && title Cvip Roblox Bypass Name Gen && MODE 52,14")
 
-proxies = open("proxies.txt").read().splitlines()
+proxies = open("proxy.txt").read().splitlines()
 
 def getProxy():
     return random.choice(proxies)
