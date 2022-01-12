@@ -20,6 +20,7 @@ def main():
     [4] Bitch
     [5] Shit
     [6] Ass
+    [7] George Floyd
 
     """)
     print(logo_names)
@@ -135,6 +136,27 @@ def main():
             #the best is 3 up
             random_shit = ("").join(random.choice(string.ascii_letters)for k in range(3))
             EndPart = "s"
+            name = f"{firstPart}{random_shit}{EndPart}"
+            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup", proxies={"http": 'http://' + getProxy()}).json()
+            code1 = checker['message']
+
+            if code1 == "Username is valid":
+                woeking+=1
+                print("["+Fore.GREEN+"INFO"+Fore.WHITE+f"] Working {name}")
+                system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
+                with open("Names.txt", "a") as f:
+                    f.write(f"{name}\n")
+                    f.close()
+            else:
+                notworking+=1
+                print("["+Fore.RED+"INFO"+Fore.WHITE+f"] Not Working {name}")
+                system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
+    if name_chose == "7":
+        while True:
+            firstPart = "George"
+            #the best is 2 up
+            random_shit = ("").join(random.choice(string.ascii_letters)for k in range(2))
+            EndPart = "Floyd"
             name = f"{firstPart}{random_shit}{EndPart}"
             checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username={name}&request.birthday=2000-01-01&request.context=Signup", proxies={"http": 'http://' + getProxy()}).json()
             code1 = checker['message']
