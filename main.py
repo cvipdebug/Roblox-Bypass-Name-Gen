@@ -1,13 +1,15 @@
-import random, string, requests
+import random, string, requests, threading
 from colorama import Fore
 from os import system
 
-system("cls && title Cvip Roblox Bypass Name Gen && MODE 52,14")
+system("title Cvip Roblox Bypass Name Gen && MODE 52,14")
 
 proxies = open("proxy.txt").read().splitlines()
 
 def getProxy():
     return random.choice(proxies)
+
+    
 def main():
 
     woeking = 0
@@ -21,6 +23,7 @@ def main():
     [5] Shit
     [6] Ass
     [7] George Floyd
+    [8] I shoot niggas for fun
 
     """)
     print(logo_names)
@@ -172,4 +175,26 @@ def main():
                 notworking+=1
                 print("["+Fore.RED+"INFO"+Fore.WHITE+f"] Not Working {name}")
                 system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
-main()
+    if name_chose == "8":
+        while True:
+            firstPart = "ni"
+            #the best is 2 up
+            random_shit = ("").join(random.choice(string.ascii_letters)for k in range(2))
+            EndPart = "ggas"
+            name = f"{firstPart}{random_shit}{EndPart}"
+            checker = requests.get(f"https://auth.roblox.com/v2/usernames/validate?request.username=Ishoot{name}forfun&request.birthday=2000-01-01&request.context=Signup", proxies={"http": 'http://' + getProxy()}).json()
+            code1 = checker['message']
+
+            if code1 == "Username is valid":
+                woeking+=1
+                print("["+Fore.GREEN+"INFO"+Fore.WHITE+f"] Working Ishoot{name}forfun")
+                system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
+                with open("Names.txt", "a") as f:
+                    f.write(f"Ishoot{name}forfun\n")
+                    f.close()
+            else:
+                notworking+=1
+                print("["+Fore.RED+"INFO"+Fore.WHITE+f"] Not Working Ishoot{name}forfun")
+                system("title Working: "+ str(woeking)+ " Not Working: "+str(notworking))
+
+threading.Thread(target= main()).start()
