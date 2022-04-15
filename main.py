@@ -9,6 +9,8 @@ proxies = open("proxy.txt").read().splitlines()
 def getProxy():
     return random.choice(proxies)
 
+amount = int(input("How many threds? : "))
+
 def assbeater420():
     woeking = 0
     notworking = 0
@@ -247,41 +249,113 @@ def main():
     name_chose = input("What Name Do You Wnat?> ")
     if name_chose == "1":
         while True:
-            nigger()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = nigger).start()
+                except:
+                    pass
     if name_chose == "2":
         while True:
-            Nigga()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Nigga).start()
+                except:
+                    pass
     if name_chose == "3":
         while True:
-            Fuck()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Fuck).start()
+                except:
+                    pass
     if name_chose == "4":
         while True:
-            Bitch()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Bitch).start()
+                except:
+                    pass
     if name_chose == "5":
         while True:
-            Shit()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Shit).start()
+                except:
+                    pass
     if name_chose == "6":
         while True:
-            Ass()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Ass).start()
+                except:
+                    pass
     if name_chose == "7":
         while True:
-            GeorgeFloyd()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = GeorgeFloyd).start()
+                except:
+                    pass
     if name_chose == "8":
         while True:
-            Ishootniggasforfun()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Ishootniggasforfun).start()
+                except:
+                    pass
     if name_chose == "9":
         while True:
-            assbeater420()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = assbeater420).start()
+                except:
+                    pass
     if name_chose == "10":
         while True:
-            nigger()
-            Nigga()
-            Fuck()
-            Bitch()
-            Shit()
-            Ass()
-            GeorgeFloyd()
-            Ishootniggasforfun()
-            assbeater420()
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = nigger).start()
+                except:
+                    pass
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Nigga).start()
+                except:
+                    pass
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Fuck).start()
+                except:
+                    pass
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Bitch).start()
+                except:
+                    pass
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Shit).start()
+                except:
+                    pass
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Ass).start()
+                except:
+                    pass
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = GeorgeFloyd).start()
+                except:
+                    pass
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = Ishootniggasforfun).start()
+                except:
+                    pass
+            if threading.active_count() <= amount:
+                try:
+                    threading.Thread(target = assbeater420).start()
+                except:
+                    pass
 
 threading.Thread(target= main()).start()
