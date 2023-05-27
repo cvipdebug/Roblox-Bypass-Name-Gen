@@ -260,10 +260,10 @@ def GeorgeFloyd():
 
 
 def Ishootniggasforfun():
-    firstPart = "ni"
+    firstPart = "nig"
     # the best is 2 up
     random_shit = ("").join(random.choice(string.ascii_letters) for k in range(2))
-    EndPart = "ggas"
+    EndPart = "gas"
     name = f"{firstPart}{random_shit}{EndPart}"
     checker = requests.get(
         f"https://auth.roblox.com/v2/usernames/validate?request.username=Ishoot{name}forfun&request.birthday=2000-01-01&request.context=Signup",
