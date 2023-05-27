@@ -331,8 +331,8 @@ def main():
                             pass
         else:
             while True:
-                loop_choice = input("Do you want to loop? (yes/no) ")
-                if loop_choice.lower() == "yes":
+                loop_choice = input("Do you want to loop? (y/n) ")
+                if loop_choice.lower() == "y":
 
                     while True:
                         if threading.active_count() <= amount:
@@ -340,14 +340,14 @@ def main():
                                 threading.Thread(target=selected_class, daemon=True).start()
                             except:
                                 pass
-                elif loop_choice.lower() == "no":
+                elif loop_choice.lower() == "n":
                     selected_class()
                     break
                 else:
-                    print("Invalid choice. Please enter 'yes' or 'no'.")
+                    print("Invalid choice. Please enter 'y' or 'n'.")
     else:
         print("Invalid choice")
 
 main()
 
-#made the code look better since there was a lot of if shits that looked bad so enjoy oh and it should run faster bc of this
+#made the code look better so no more if 1 then so on and made a cool thing that ask if you wanna loop it or no :)
